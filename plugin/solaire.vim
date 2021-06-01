@@ -41,10 +41,11 @@ function! SolaireDim(winnr)
     endif
 endfunction
 
+call SolaireCreateHighlight()
 augroup SolaireHighlight
   autocmd!
   autocmd ColorScheme * call SolaireCreateHighlight()
 augroup END
 
-" autocmd WinEnter * call Solaire()
+autocmd WinEnter * call Solaire()
 autocmd BufEnter * call Solaire()
